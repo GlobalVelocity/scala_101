@@ -25,11 +25,11 @@ class NumberFiltersTest extends FunSpec with ShouldMatchers with NumberFilters {
 
     it ("should partition an inputList into a 3-tuple of lists containing negatives, zeros, and positives respectively"){
 
-      partitionEvenOddNumbers(List(20, 15, 0, -5, 0, -1, 3)) should equal(Tuple3(List(-5, -1), List(0, 0), List(20, 15, 3)))
+      partitionNumbersBySign(List(20, 15, 0, -5, 0, -1, 3)) should equal(Tuple3(List(-5, -1), List(0, 0), List(20, 15, 3)))
 
-      partitionEvenOddNumbers(List(20, 15, -5, -1, 3)) should equal(Tuple3(List(-5, -1), List.empty, List(20, 15, 3)))
+      partitionNumbersBySign(List(20, 15, -5, -1, 3)) should equal(Tuple3(List(-5, -1), List.empty, List(20, 15, 3)))
 
-      partitionEvenOddNumbers(List.empty) should equal(Tuple3(List.empty, List.empty, List.empty))
+      partitionNumbersBySign(List.empty) should equal(Tuple3(List.empty, List.empty, List.empty))
 
     }
   }
