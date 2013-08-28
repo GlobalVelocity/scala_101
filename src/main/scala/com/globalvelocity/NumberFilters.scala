@@ -11,7 +11,7 @@ trait NumberFilters {
   //TODO: Implement these so the test for it can succeed.
 
   def filterEvenNumbers(ints:List[Int]):List[Int] = {
-    List.empty
+    ints.filter(i => i % 2 == 0)
   }
 
     /**
@@ -21,6 +21,9 @@ trait NumberFilters {
      * val partitionedResult = Tuple3(List(-5, -1), List(0, 0), List(20, 15, 3))
      */
   def partitionNumbersBySign(ints:List[Int]):Tuple3[List[Int], List[Int], List[Int]] = {
-    (List.empty, List.empty, List.empty)
-  }
+      val negatives = ints.filter(_ < 0)
+      val zeros = ints.filter(_ ==0)
+      val positives = ints.filter(_ > 0)
+      Tuple3(negatives, zeros, positives)
+    }
 }
