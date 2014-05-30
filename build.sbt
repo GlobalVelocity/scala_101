@@ -27,6 +27,4 @@ libraryDependencies ++= Seq("org.ektorp" % "org.ektorp" % "1.4.0", "com.fasterxm
 
 libraryDependencies ++= Seq("joda-time" % "joda-time" % "2.1", "org.joda" % "joda-convert" % "1.2", "jcifs" % "jcifs" % "1.3.17")
 
-seq(ScctPlugin.instrumentSettings : _*)
-
 scalacOptions ++= Seq("-deprecation", "-feature", "-language:postfixOps", "-language:implicitConversions")
